@@ -25,7 +25,6 @@ public class CardDeliveryTestsPositiveDate {
 
     @Test
     @DisplayName("Должен бронировать карту с доставкой при вводе валидных данных")
-
     void shouldSubmitRequest() {
         open("http://localhost:9999/");
         $("[data-test-id=city] input.input__control").setValue("Москва");

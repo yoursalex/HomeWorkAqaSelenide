@@ -12,7 +12,6 @@ public class CardDeliveryTestsNegativeDate {
 
     @Test
     @DisplayName("Не должен бронировать карту если дата меньше 3 дней с текущей")
-
     void shouldNotSubmitWithWrongDate() {
         LocalDate today = LocalDate.now();
         LocalDate dateToBeSet = today.plusDays(2);
@@ -31,7 +30,6 @@ public class CardDeliveryTestsNegativeDate {
 
     @Test
     @DisplayName("Не должен бронировать карту если дата заказа не указана")
-
     void shouldNotSubmitWithEmptyDate() {
         open("http://localhost:9999/");
         $("[data-test-id=city] input.input__control").setValue("Москва");
