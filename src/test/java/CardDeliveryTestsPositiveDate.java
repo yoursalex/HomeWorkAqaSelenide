@@ -49,7 +49,7 @@ public class CardDeliveryTestsPositiveDate {
         $("[data-test-id=phone] input.input__control").setValue(phone);
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("fieldset").$("span").shouldHave(Condition.cssClass("input_invalid")); //здесь выходит, что работает только для первого набора данных..
+        $$("span").find(Condition.cssClass("input_invalid")).shouldHave(Condition.visible);
     }
 
 }
